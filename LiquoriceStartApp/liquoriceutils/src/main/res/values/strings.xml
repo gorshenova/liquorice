@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Utils</string>
+
+    <string name="text_ok" translatable="false">OK</string>
+
+    <!-- Errors-->
+    <string name="error_override_dir">You can not override directory with file</string>
+</resources>

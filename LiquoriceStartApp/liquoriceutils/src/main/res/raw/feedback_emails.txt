@@ -1,0 +1,2 @@
+// list of emails (line by line) to send feedback
+applegreenxxx@gmail.com

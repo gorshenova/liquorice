@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App.Theme.Dialog.Dark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/colorDarkDialogBackground</item>
+        <item name="android:textColorPrimary">@color/colorDarkDialogFont</item>
+    </style>
+
+    <style name="W2W.Theme.Dialog" parent="android:Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

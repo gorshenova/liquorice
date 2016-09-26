@@ -1,0 +1,3 @@
+// list of emails (line by line) to send feedback
+eyablonskaya@geeksforless.net
+applegreenxxx@gmail.com

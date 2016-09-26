@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RocketStartApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="feedback_email_subject">Feedback</string>
+    <string name="text_no_email_clients">No email-clients installed on this device</string>
+    <string name="btn_ok" translatable="false">OK</string>
+    <string name="text_choose_matching_email_client">Choose matching email-client</string>
+</resources>
