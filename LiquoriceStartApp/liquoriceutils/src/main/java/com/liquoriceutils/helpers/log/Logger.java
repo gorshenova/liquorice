@@ -1,10 +1,10 @@
-package com.eg.utils.helpers.log;
+package com.liquoriceutils.helpers.log;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.eg.utils.AppConfig;
-import com.eg.utils.helpers.encryprion.LoggerEncryptionManager;
+import com.liquoriceutils.utils.LiquoriceAppConfig;
+import com.liquoriceutils.helpers.encryprion.LoggerEncryptionManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +14,6 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.util.Locale;
-
 
 /**
  * Used to output logs
@@ -90,7 +89,7 @@ public class Logger {
 
     public static void debug(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (AppConfig.DEBUG) {
+        if (LiquoriceAppConfig.DEBUG) {
             debugOutput(text);
         } else {
             try {
@@ -114,7 +113,7 @@ public class Logger {
 
     public static void info(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (AppConfig.DEBUG) {
+        if (LiquoriceAppConfig.DEBUG) {
             infoOutput(text);
         } else {
             try {
@@ -142,7 +141,7 @@ public class Logger {
 
     public static void warn(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (AppConfig.DEBUG) {
+        if (LiquoriceAppConfig.DEBUG) {
             warnOutput(text);
         } else {
             try {
@@ -177,7 +176,7 @@ public class Logger {
         PrintWriter pw = new PrintWriter(sw);
         e.printStackTrace(pw);
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message + "\n" + sw.toString();
-        if (AppConfig.DEBUG) {
+        if (LiquoriceAppConfig.DEBUG) {
             errorOutput(text);
         } else {
             try {
@@ -193,7 +192,7 @@ public class Logger {
 
     public static void error(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (AppConfig.DEBUG) {
+        if (LiquoriceAppConfig.DEBUG) {
             errorOutput(text);
         } else {
             try {

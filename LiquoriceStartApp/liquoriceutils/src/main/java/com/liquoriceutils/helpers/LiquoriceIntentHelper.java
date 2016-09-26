@@ -1,4 +1,4 @@
-package com.eg.utils.helpers;
+package com.liquoriceutils.helpers;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -6,9 +6,9 @@ import android.net.Uri;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 
-import com.eg.utils.R;
-import com.eg.utils.UtilsApplication;
-import com.eg.utils.helpers.log.Logger;
+import com.liquoriceutils.utils.R;
+import com.liquoriceutils.utils.LiquoriceApplication;
+import com.liquoriceutils.helpers.log.Logger;
 
 import java.io.File;
 import java.util.List;
@@ -16,9 +16,9 @@ import java.util.List;
 /**
  * Intent helper
  */
-public class UtilsIntentHelper {
+public class LiquoriceIntentHelper {
 
-    private static Logger logger = Logger.getLogger(UtilsIntentHelper.class);
+    private static Logger logger = Logger.getLogger(LiquoriceIntentHelper.class);
 
     public static boolean openEmailActivityWithLogFileAttachment(AppCompatActivity activity,
                                                                  String packageName,
@@ -38,7 +38,7 @@ public class UtilsIntentHelper {
             activity.startActivity(Intent.createChooser(emailIntent, chooserTitle));
             return true;
         } catch (ActivityNotFoundException ex) {
-            logger.error(UtilsApplication.getContext().getString(R.string.error_override_dir));
+            logger.error(LiquoriceApplication.getContext().getString(R.string.error_override_dir));
             return false;
         }
     }

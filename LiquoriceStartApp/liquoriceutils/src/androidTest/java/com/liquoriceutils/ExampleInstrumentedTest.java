@@ -1,4 +1,4 @@
-package com.gorshenova.utils;
+package com.liquoriceutils;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

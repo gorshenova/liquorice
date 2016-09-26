@@ -1,4 +1,4 @@
-package com.eg.utils;
+package com.liquoriceutils.utils;
 
 import android.app.Application;
 
@@ -6,9 +6,9 @@ import android.app.Application;
  * Created by eyablonskaya on 9/23/2016.
  */
 
-public class UtilsApplication extends Application {
+public class LiquoriceApplication extends Application {
 
-    private static UtilsApplication instance;
+    private static LiquoriceApplication instance;
 
     @Override
     public void onCreate() {
@@ -20,7 +20,7 @@ public class UtilsApplication extends Application {
         return instance;
     }
 
-    public static UtilsApplication getApplication(){
+    public static LiquoriceApplication getApplication(){
         return instance;
     }
 }

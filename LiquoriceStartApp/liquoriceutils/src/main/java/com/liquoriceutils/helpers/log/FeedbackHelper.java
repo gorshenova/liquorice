@@ -1,10 +1,10 @@
-package com.eg.utils.helpers.log;
+package com.liquoriceutils.helpers.log;
 
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.eg.utils.R;
-import com.eg.utils.helpers.io.FileUtils;
+import com.liquoriceutils.utils.R;
+import com.liquoriceutils.helpers.io.FileUtils;
 
 import java.util.List;
 

@@ -11,10 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.eg.utils.helpers.UtilsIntentHelper;
-import com.eg.utils.helpers.log.FeedbackHelper;
-import com.eg.utils.helpers.log.Logger;
-import com.eg.utils.helpers.ui.dialog.DialogHelper;
+import com.liquoriceutils.helpers.LiquoriceIntentHelper;
+import com.liquoriceutils.helpers.log.FeedbackHelper;
+import com.liquoriceutils.helpers.log.Logger;
+import com.liquoriceutils.helpers.ui.dialog.LiquoriceDialogHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -99,14 +99,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String username = "Jon Mayer";
         String body = "User Jon Mayer see this application and click on button send feedback...";
-        boolean successfullySending = UtilsIntentHelper.openEmailActivityWithLogFileAttachment(this,
-                RocketStartApplication.getContext().getPackageName(),
+        boolean successfullySending = LiquoriceIntentHelper.openEmailActivityWithLogFileAttachment(this,
+                LiquoriceStartApplication.getContext().getPackageName(),
                 emailsToSend, emailsToSendCopy,
                 getFeedbackTopic(this, username),
                 body,
                 getString(R.string.text_choose_matching_email_client));
         if(!successfullySending){
-            DialogHelper.showSingleButtonDialog(this, R.string.text_no_email_clients, R.string.btn_ok, R.color.colorPrimaryDark);
+            LiquoriceDialogHelper.showSingleButtonDialog(this, R.string.text_no_email_clients, R.string.btn_ok, R.color.colorPrimaryDark);
         }
 
     }

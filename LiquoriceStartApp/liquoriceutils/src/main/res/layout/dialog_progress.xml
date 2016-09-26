@@ -5,7 +5,7 @@
     android:layout_gravity="center"
     android:id="@+id/root_view" >
 
-    <com.eg.utils.views.GQProgressBar
+    <com.liquoriceutils.views.LiquoriceProgressBar
         android:id="@+id/progress"
         android:layout_margin="@dimen/dimen_10"
         android:layout_width="wrap_content"

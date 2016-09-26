@@ -1,10 +1,10 @@
-package com.eg.utils;
+package com.liquoriceutils.utils;
 
 /**
  * Util's constants
  */
 
-public class AppConfig {
+public class LiquoriceAppConfig {
 
     /**
      * Setup 'false' value for DEBUG constant when release mode and 'true' when debug mode

@@ -6,9 +6,9 @@ import android.app.Application;
  * Created by eyablonskaya on 9/23/2016.
  */
 
-public class RocketStartApplication extends Application {
+public class LiquoriceStartApplication extends Application {
 
-    private static RocketStartApplication instance;
+    private static LiquoriceStartApplication instance;
 
     @Override
     public void onCreate() {
@@ -17,7 +17,7 @@ public class RocketStartApplication extends Application {
         instance =  this;
     }
 
-    public static RocketStartApplication getApplication(){
+    public static LiquoriceStartApplication getApplication(){
         return instance;
     }
 

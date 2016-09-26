@@ -1,4 +1,4 @@
-package com.eg.utils.views;
+package com.liquoriceutils.views;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -7,18 +7,18 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-import com.eg.utils.R;
+import com.liquoriceutils.utils.R;
 
-public class GQProgressBar extends ProgressBar {
-    public GQProgressBar(Context context) {
+public class LiquoriceProgressBar extends ProgressBar {
+    public LiquoriceProgressBar(Context context) {
         super(context);
     }
 
-    public GQProgressBar(Context context, AttributeSet attrs) {
+    public LiquoriceProgressBar(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public GQProgressBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LiquoriceProgressBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

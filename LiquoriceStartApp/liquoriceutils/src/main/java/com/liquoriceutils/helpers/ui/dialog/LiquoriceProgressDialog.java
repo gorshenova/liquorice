@@ -1,4 +1,4 @@
-package com.eg.utils.helpers.ui.dialog;
+package com.liquoriceutils.helpers.ui.dialog;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,14 +10,14 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
 
-import com.eg.utils.R;
+import com.liquoriceutils.utils.R;
 
 
-public class CustomProgressDialog extends ProgressDialog { //TODO rename file
+public class LiquoriceProgressDialog extends ProgressDialog { //TODO rename file
 	private static final String PROGRESS_BACKGROUND_COLOR = "ProgressBackgroundColor";
 	private int bgColor;
 
-	public CustomProgressDialog(Context context) {
+	public LiquoriceProgressDialog(Context context) {
 		super(context, R.style.W2W_Theme_Dialog);
 	}
 

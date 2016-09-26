@@ -1,6 +1,6 @@
-package com.eg.utils.helpers.encryprion;
+package com.liquoriceutils.helpers.encryprion;
 
-import com.eg.utils.helpers.log.Logger;
+import com.liquoriceutils.helpers.log.Logger;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;

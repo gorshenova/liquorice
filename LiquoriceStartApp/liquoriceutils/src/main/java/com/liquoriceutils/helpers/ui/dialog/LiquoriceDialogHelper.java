@@ -1,4 +1,4 @@
-package com.eg.utils.helpers.ui.dialog;
+package com.liquoriceutils.helpers.ui.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -21,11 +21,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.eg.utils.R;
-import com.eg.utils.helpers.log.Logger;
+import com.liquoriceutils.utils.R;
+import com.liquoriceutils.helpers.log.Logger;
 
-public class DialogHelper {
-    private static Logger logger = Logger.getLogger(DialogHelper.class);
+public class LiquoriceDialogHelper {
+    private static Logger logger = Logger.getLogger(LiquoriceDialogHelper.class);
 
     public static void showToast(Context context, int message) {
         showToast(context, context.getString(message));
@@ -161,7 +161,7 @@ public class DialogHelper {
     }
 
     public static Dialog getProgressDialog(Context context) {
-        CustomProgressDialog dialog = new CustomProgressDialog(context);
+        LiquoriceProgressDialog dialog = new LiquoriceProgressDialog(context);
         dialog.setCancelable(false);
         return dialog;
     }

@@ -1,13 +1,13 @@
-package com.eg.utils.helpers.io;
+package com.liquoriceutils.helpers.io;
 
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 
-import com.eg.utils.R;
-import com.eg.utils.UtilsApplication;
-import com.eg.utils.UtilsConstants;
-import com.eg.utils.helpers.log.Logger;
+import com.liquoriceutils.utils.LiquoriceConstants;
+import com.liquoriceutils.utils.R;
+import com.liquoriceutils.utils.LiquoriceApplication;
+import com.liquoriceutils.helpers.log.Logger;
 
 import org.apache.commons.io.IOUtils;
 
@@ -35,7 +35,7 @@ public class FileUtils {
     public static final String PATH_DIV = "/";
 
     public static File getCacheDir() {
-        return UtilsApplication.getContext().getExternalCacheDir();
+        return LiquoriceApplication.getContext().getExternalCacheDir();
     }
 
     public static File createCacheFile(String name) {
@@ -50,7 +50,7 @@ public class FileUtils {
         if (!file.exists()) {
             try {
                 if (file.createNewFile()) {
-                    logger.warn(UtilsApplication.getContext().getString(R.string.error_override_dir));
+                    logger.warn(LiquoriceApplication.getContext().getString(R.string.error_override_dir));
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -76,8 +76,8 @@ public class FileUtils {
         BufferedReader br = null;
 
         try {
-            if (assetsPath.startsWith(UtilsConstants.ASSETS_ROOT)) {
-                int start = UtilsConstants.ASSETS_ROOT.length();
+            if (assetsPath.startsWith(LiquoriceConstants.ASSETS_ROOT)) {
+                int start = LiquoriceConstants.ASSETS_ROOT.length();
                 int end = assetsPath.length();
                 assetsPath = assetsPath.substring(start, end);
             }
@@ -116,8 +116,8 @@ public class FileUtils {
         boolean exist = false;
 
         try {
-            if (assetsPath.startsWith(UtilsConstants.ASSETS_ROOT)) {
-                int start = UtilsConstants.ASSETS_ROOT.length();
+            if (assetsPath.startsWith(LiquoriceConstants.ASSETS_ROOT)) {
+                int start = LiquoriceConstants.ASSETS_ROOT.length();
                 int end = assetsPath.length();
                 assetsPath = assetsPath.substring(start, end);
             }
@@ -134,11 +134,11 @@ public class FileUtils {
     }
 
     public static boolean isFilePathToAssets(String filePath) {
-        return filePath.startsWith(UtilsConstants.ASSETS_ROOT);
+        return filePath.startsWith(LiquoriceConstants.ASSETS_ROOT);
     }
 
     public static String trimAssetsPath(String filePath) {
-        int start = UtilsConstants.ASSETS_ROOT.length();
+        int start = LiquoriceConstants.ASSETS_ROOT.length();
         int end = filePath.length();
 
         return filePath.substring(start, end);
