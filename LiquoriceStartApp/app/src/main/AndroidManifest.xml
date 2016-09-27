@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rocketstart.app.android" >
+    package="com.liquorice.app.android" >
 
     <application
-        android:name=".LiquoriceStartApplication"
+        android:name="com.liquorice.app.android.core.LiquoriceStartApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.rocketstart.app.android.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name="com.liquorice.app.android.ui.activities.abs.BaseSlidingMenuActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +23,7 @@
         <!-- Provider to attach log file to feedback email-->
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.rocketstart.app.android"
+            android:authorities="com.liquorice.app.android"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

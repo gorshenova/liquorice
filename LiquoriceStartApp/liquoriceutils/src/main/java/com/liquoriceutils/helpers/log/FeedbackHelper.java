@@ -31,15 +31,17 @@ public class FeedbackHelper {
      * @param emailsToSendCopy is the list of email addresses, which will be input in the field 'CC:'
      * @return true if success else false
      */
-    public boolean fillFeedbackSupportInfo(Context context, List<String> emailsToSend, List<String> emailsToSendCopy) {
+    public boolean fillFeedbackSupportInfo(Context context, List<String> emailsToSend,
+                                           List<String> emailsToSendCopy, int emailsToSendRowId,
+                                           int emailsToSendCopyRawId) {
         if (emailsToSend != null && emailsToSendCopy != null) {
-            List<String> linesFromRawFile = FileUtils.getFileLinesFromRawFile(context, R.raw.feedback_copy_emails);
+            List<String> linesFromRawFile = FileUtils.getFileLinesFromRawFile(context, emailsToSendCopyRawId);
             for (String line : linesFromRawFile) {
                 if (FeedbackHelper.isValidEmail(line)) {
                     emailsToSendCopy.add(line);
                 }
             }
-            linesFromRawFile = FileUtils.getFileLinesFromRawFile(context, R.raw.feedback_emails);
+            linesFromRawFile = FileUtils.getFileLinesFromRawFile(context, emailsToSendRowId );
             for (String line : linesFromRawFile) {
                 if (FeedbackHelper.isValidEmail(line)) {
                     emailsToSend.add(line);

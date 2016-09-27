@@ -1,4 +1,4 @@
-package com.rocketstart;
+package com.liquorice;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

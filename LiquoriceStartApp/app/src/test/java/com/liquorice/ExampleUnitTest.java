@@ -1,4 +1,4 @@
-package com.rocketstart;
+package com.liquorice;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.rocketstart.app.android;
+package com.liquorice.app.android.core;
 
 import android.app.Application;
 
