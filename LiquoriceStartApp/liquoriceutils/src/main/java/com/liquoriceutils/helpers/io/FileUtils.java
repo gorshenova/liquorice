@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 
-import com.liquoriceutils.utils.LiquoriceConstants;
-import com.liquoriceutils.utils.R;
-import com.liquoriceutils.utils.LiquoriceApplication;
+import com.liquoriceutils.core.LiquoriceConstants;
+import com.liquoriceutils.core.R;
+import com.liquoriceutils.core.LiquoriceApplication;
 import com.liquoriceutils.helpers.log.Logger;
 
 import org.apache.commons.io.IOUtils;

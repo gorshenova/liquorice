@@ -3,8 +3,7 @@ package com.liquoriceutils.helpers.log;
 import android.content.Context;
 import android.util.Log;
 
-import com.liquoriceutils.utils.LiquoriceAppConfig;
-import com.liquoriceutils.helpers.encryprion.LoggerEncryptionManager;
+import com.liquoriceutils.core.LiquoriceAppConfig;
 
 import java.io.BufferedReader;
 import java.io.File;

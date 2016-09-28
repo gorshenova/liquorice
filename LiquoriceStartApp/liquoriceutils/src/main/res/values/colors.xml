@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">@color/colorGreyLight</color>
+    <color name="colorPrimaryDark">@color/colorGreyDarkDark</color>
+    <color name="colorGreyDarkDark">#1f1f1f</color>
+    <color name="colorGreyLight">#363636</color>
     <color name="tw__transparent">#00000000</color>
     <color name="colorDarkDialogBackground">#424242</color>
     <color name="colorDarkDialogFont">#D9DCDD</color>
-    <color name="colorPrimary">#0092d6</color>
 </resources>

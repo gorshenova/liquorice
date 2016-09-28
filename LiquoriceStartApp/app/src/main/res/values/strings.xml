@@ -2,6 +2,7 @@
     <string name="app_name">Liquorice</string>
     <string name="action_settings">Settings</string>
 
+    <!-- FEEDBACK -->
     <string name="feedback_email_subject">@string/menu_item_feedback</string>
     <string name="feedback_send_feedback">Send Feedback</string>
     <string name="text_feedback_instructions_title">Feedback Instructions</string>
@@ -13,7 +14,6 @@
         <p>3. Do not forget add emails in files <b>raw/feedback_copy_emails</b>, <b>raw/feedback_emails</b>.</p>
     ]]>
     </string>
-
     <string name="text_no_email_clients">No email-clients installed on this device</string>
     <string name="btn_ok" translatable="false">OK</string>
     <string name="text_choose_matching_email_client">Choose matching email-client</string>
@@ -22,7 +22,16 @@
     <string name="menu_drawer_open" translatable="false">Open</string>
     <string name="menu_drawer_close" translatable="false">Close</string>
     <string name="menu_item_feedback">Feedback</string>
+    <string name="menu_item_general_settings">General Settings</string>
     <string-array name="menu_items">
         <item>@string/menu_item_feedback</item>
+        <item>@string/menu_item_general_settings</item>
     </string-array>
+
+    <!--GENERAL SETTINGS -->
+    <string name="general_settings_instructions">
+        <![CDATA[
+        <p>1. Setup colors with your own for <b>colorPrimary, colorPrimaryDark</b>.</p>
+        ]]>
+    </string>
 </resources>

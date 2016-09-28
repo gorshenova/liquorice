@@ -1,6 +1,6 @@
-package com.liquoriceutils.helpers.encryprion;
+package com.liquoriceutils.helpers.log;
 
-import com.liquoriceutils.helpers.log.Logger;
+import com.liquoriceutils.core.BuildConfig;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;
@@ -17,23 +17,22 @@ import javax.crypto.spec.SecretKeySpec;
  * Logs are output to the release mode in an encrypted form, the debug mode without any encryption.
  */
 public class LoggerEncryptionManager {
-    private static final String PASSWORD_KEY = "e008cd9b379dc970"; //TODO refactoring: Don't save secret info inside the app
-    private static final String INIT_VECTOR = "0123456789abcdef";
+
     private static final String ALGORITHM_TYPE = "AES";
     private static final String ALGORITHM_TRANSFORMATION = "AES/CBC/PKCS5PADDING";
     private static final String CHARSET_ENCODING = "UTF-8";
 
     public static String getEncodedBase64Key(String sourceString) throws UnsupportedEncodingException, GeneralSecurityException {
-        return encrypt(PASSWORD_KEY, sourceString);
+        return encrypt(BuildConfig.loggerEncryptionPasswordKey, sourceString);
     }
 
     public static String getDecodeBase64Key(String sourceString) throws UnsupportedEncodingException, GeneralSecurityException {
-        return decrypt(PASSWORD_KEY, sourceString);
+        return decrypt(BuildConfig.loggerEncryptionPasswordKey, sourceString);
     }
 
     private static String encrypt(String key, String value) {
         try {
-            IvParameterSpec iv = new IvParameterSpec(INIT_VECTOR.getBytes(CHARSET_ENCODING));
+            IvParameterSpec iv = new IvParameterSpec(BuildConfig.loggerEncryptionInitVector.getBytes(CHARSET_ENCODING));
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(CHARSET_ENCODING), ALGORITHM_TYPE);
 
             Cipher cipher = Cipher.getInstance(ALGORITHM_TRANSFORMATION);
@@ -51,7 +50,7 @@ public class LoggerEncryptionManager {
 
     private static String decrypt(String key, String encrypted) {
         try {
-            IvParameterSpec iv = new IvParameterSpec(INIT_VECTOR.getBytes(CHARSET_ENCODING));
+            IvParameterSpec iv = new IvParameterSpec(BuildConfig.loggerEncryptionInitVector.getBytes(CHARSET_ENCODING));
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(CHARSET_ENCODING), ALGORITHM_TYPE);
 
             Cipher cipher = Cipher.getInstance(ALGORITHM_TRANSFORMATION);

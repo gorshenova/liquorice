@@ -21,10 +21,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.liquoriceutils.utils.R;
 import com.liquoriceutils.helpers.log.Logger;
+import com.liquoriceutils.core.R;
 
 public class LiquoriceDialogHelper {
+
     private static Logger logger = Logger.getLogger(LiquoriceDialogHelper.class);
 
     public static void showToast(Context context, int message) {
@@ -39,16 +40,16 @@ public class LiquoriceDialogHelper {
                                               DialogInterface.OnClickListener clickListener) {
         showDoubleButtonDialog(context, null, message,
                 positiveButtonResId,
-                negativeButtonResId, colorPrimaryId, clickListener);
+                negativeButtonResId, clickListener);
     }
 
     public static void showDoubleButtonDialog(Context context, String title, String message, int positiveButtonResId,
-                                              int negativeButtonResId, int colorPrimaryId, DialogInterface.OnClickListener clickListener) {
+                                              int negativeButtonResId, DialogInterface.OnClickListener clickListener) {
         AlertDialog.Builder builder = getAlertDialogBuilder(context);
         builder.setMessage(message).setTitle(title)
                 .setNegativeButton(negativeButtonResId, clickListener)
                 .setPositiveButton(positiveButtonResId, clickListener);
-        showDialog(builder, context, colorPrimaryId );
+        showDialog(builder, context);
     }
 
     public static AlertDialog createDoubleButtonDialog(final Context context, String title, String message, int positiveButtonResId,
@@ -61,7 +62,7 @@ public class LiquoriceDialogHelper {
         return builder.create();
     }
 
-    public static void showSingleButtonDialog(Context context, int messageId, int positiveButtonResId, int colorPrimaryId) {
+    public static void showSingleButtonDialog(Context context, int messageId, int positiveButtonResId) {
         AlertDialog.Builder builder = getAlertDialogBuilder(context);
         builder.setMessage(messageId).setPositiveButton(positiveButtonResId, new DialogInterface.OnClickListener() {
             @Override
@@ -69,13 +70,13 @@ public class LiquoriceDialogHelper {
                 dialog.dismiss();
             }
         });
-        showDialog(builder, context, colorPrimaryId);
+        showDialog(builder, context);
     }
 
-    public static void showSingleButtonDialog(Context context, int messageId, int positiveButtonResId, DialogInterface.OnClickListener listener, int colorPrimaryId) {
+    public static void showSingleButtonDialog(Context context, int messageId, int positiveButtonResId, DialogInterface.OnClickListener listener) {
         AlertDialog.Builder builder = getAlertDialogBuilder(context);
         builder.setMessage(messageId).setPositiveButton(positiveButtonResId, listener);
-        showDialog(builder, context, colorPrimaryId);
+        showDialog(builder, context);
     }
 
     public static void showPermissionDialog(Context context, boolean shouldShowRationale,
@@ -119,14 +120,14 @@ public class LiquoriceDialogHelper {
         showCustomDialog(context, message);
     }
 
-    private static void showDialog(AlertDialog.Builder builder, final Context context, final int colorPrimaryId) {
+    private static void showDialog(AlertDialog.Builder builder, final Context context) {
         final AlertDialog alertDialog = builder.create();
         builder.setCancelable(false);
         alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialog) {
-                alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(context, colorPrimaryId));
-                alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(context, colorPrimaryId));
+                alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(context, R.color.colorPrimary));
+                alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(context, R.color.colorPrimary));
             }
         });
         alertDialog.show();
@@ -147,7 +148,7 @@ public class LiquoriceDialogHelper {
     }
 
     private static android.support.v7.app.AlertDialog.Builder getWarningAlertDialogBuilder(Context context) {
-        return new android.support.v7.app.AlertDialog.Builder(context, R.style.App_Theme_Dialog_Dark);
+        return new android.support.v7.app.AlertDialog.Builder(context, R.style.Liquorice_Theme_Dialog_Dark);
     }
 
     public static void safeClose(Dialog dialog) {
@@ -166,7 +167,7 @@ public class LiquoriceDialogHelper {
         return dialog;
     }
 
-    public static ProgressDialog createAndShowProgressDialogWithMessage(Context context, String message, int colorPrimaryDarkId) {
+    public static ProgressDialog createAndShowProgressDialogWithMessage(Context context, String message) {
         ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setMessage(message);
         progressDialog.setCancelable(false);
@@ -174,7 +175,7 @@ public class LiquoriceDialogHelper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             ProgressBar progressBar = (ProgressBar) progressDialog.findViewById(android.R.id.progress);
             if (progressBar != null) {
-                progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(context, colorPrimaryDarkId), PorterDuff.Mode.SRC_ATOP);
+                progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(context, R.color.colorPrimaryDark), PorterDuff.Mode.SRC_ATOP);
             }
         } else {
             progressDialog.setIndeterminateDrawable(ContextCompat.getDrawable(context, R.drawable.rotating_pb_bg));

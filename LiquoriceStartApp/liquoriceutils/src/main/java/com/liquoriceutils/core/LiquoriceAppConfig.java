@@ -1,4 +1,4 @@
-package com.liquoriceutils.utils;
+package com.liquoriceutils.core;
 
 /**
  * Util's constants

@@ -3,7 +3,6 @@ package com.liquoriceutils.helpers.log;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.liquoriceutils.utils.R;
 import com.liquoriceutils.helpers.io.FileUtils;
 
 import java.util.List;

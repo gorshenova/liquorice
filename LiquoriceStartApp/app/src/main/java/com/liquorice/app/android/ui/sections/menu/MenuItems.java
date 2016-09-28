@@ -5,5 +5,6 @@ package com.liquorice.app.android.ui.sections.menu;
  */
 
 public interface MenuItems {
-    int MENU_FEEDBACK = 0;
+    int MENU_GENERAL_SETTINGS = 0;
+    int MENU_FEEDBACK = 1;
 }

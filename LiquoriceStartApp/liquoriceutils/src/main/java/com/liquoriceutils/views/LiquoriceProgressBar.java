@@ -7,7 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-import com.liquoriceutils.utils.R;
+import com.liquoriceutils.core.R;
 
 public class LiquoriceProgressBar extends ProgressBar {
     public LiquoriceProgressBar(Context context) {

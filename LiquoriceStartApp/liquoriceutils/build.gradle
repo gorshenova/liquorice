@@ -20,11 +20,15 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "Boolean", "DEBUG_MODE", "false"
+            buildConfigField "String", "loggerEncryptionPasswordKey", "\"${loggerEncryptionPasswordKey}\""
+            buildConfigField "String", "loggerEncryptionInitVector", "\"${loggerEncryptionInitVector}\""
         }
 
 
         debug {
             buildConfigField "Boolean", "DEBUG_MODE", "true"
+            buildConfigField "String", "loggerEncryptionPasswordKey", "\"${loggerEncryptionPasswordKey}\""
+            buildConfigField "String", "loggerEncryptionInitVector", "\"${loggerEncryptionInitVector}\""
         }
     }
 }

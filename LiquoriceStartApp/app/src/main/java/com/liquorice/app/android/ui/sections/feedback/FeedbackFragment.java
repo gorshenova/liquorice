@@ -3,8 +3,6 @@ package com.liquorice.app.android.ui.sections.feedback;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +14,8 @@ import com.liquorice.app.android.core.LiquoriceStartApplication;
 import com.liquorice.app.android.ui.activities.abs.BaseActivity;
 import com.liquorice.app.android.ui.fragments.abs.BaseFragment;
 import com.liquoriceutils.helpers.LiquoriceIntentHelper;
+import com.liquoriceutils.helpers.LiquoriceStringHelper;
 import com.liquoriceutils.helpers.log.FeedbackHelper;
-import com.liquoriceutils.helpers.log.Logger;
 import com.liquoriceutils.helpers.ui.dialog.LiquoriceDialogHelper;
 
 import java.text.SimpleDateFormat;
@@ -67,15 +65,7 @@ public class FeedbackFragment extends BaseFragment implements View.OnClickListen
     }
 
     private void initInstructions(){
-        Spanned htmlAsSpanned;
-        String htmlstring = getString(R.string.text_feedback_instructions).replace("&lt;", "<").replace("&gt;", ">");
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            htmlAsSpanned = Html.fromHtml(htmlstring,Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            htmlAsSpanned = Html.fromHtml(htmlstring);
-        }
-
-        feedbackTextView.setText(htmlAsSpanned);
+        feedbackTextView.setText(LiquoriceStringHelper.getHtmlString(getString(R.string.text_feedback_instructions)));
     }
 
     @Override
@@ -100,7 +90,7 @@ public class FeedbackFragment extends BaseFragment implements View.OnClickListen
                 body,
                 getString(R.string.text_choose_matching_email_client));
         if(!successfullySending){
-            LiquoriceDialogHelper.showSingleButtonDialog(getActivity(), R.string.text_no_email_clients, R.string.btn_ok, R.color.colorPrimaryDark);
+            LiquoriceDialogHelper.showSingleButtonDialog(getActivity(), R.string.text_no_email_clients, R.string.btn_ok);
         }
 
     }
