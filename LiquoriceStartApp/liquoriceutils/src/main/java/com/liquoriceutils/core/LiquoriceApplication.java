@@ -3,6 +3,7 @@ package com.liquoriceutils.core;
 import android.app.Application;
 import android.content.pm.PackageManager;
 
+import com.liquoriceutils.BuildConfig;
 import com.liquoriceutils.LiquoriceHidingUtils;
 import com.liquoriceutils.helpers.log.Logger;
 

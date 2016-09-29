@@ -3,7 +3,7 @@ package com.liquoriceutils.helpers.log;
 import android.content.Context;
 import android.util.Log;
 
-import com.liquoriceutils.core.LiquoriceAppConfig;
+import com.liquoriceutils.BuildConfig;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -88,7 +88,7 @@ public class Logger {
 
     public static void debug(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (LiquoriceAppConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             debugOutput(text);
         } else {
             try {
@@ -112,7 +112,7 @@ public class Logger {
 
     public static void info(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (LiquoriceAppConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             infoOutput(text);
         } else {
             try {
@@ -140,7 +140,7 @@ public class Logger {
 
     public static void warn(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (LiquoriceAppConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             warnOutput(text);
         } else {
             try {
@@ -175,7 +175,7 @@ public class Logger {
         PrintWriter pw = new PrintWriter(sw);
         e.printStackTrace(pw);
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message + "\n" + sw.toString();
-        if (LiquoriceAppConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             errorOutput(text);
         } else {
             try {
@@ -191,7 +191,7 @@ public class Logger {
 
     public static void error(Class<?> cls, String message) {
         String text = cls.getSimpleName() + FILTER_MSG_NAME + message;
-        if (LiquoriceAppConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             errorOutput(text);
         } else {
             try {

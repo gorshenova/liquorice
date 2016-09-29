@@ -16,6 +16,7 @@ import com.liquorice.app.android.ui.fragments.abs.BaseFragment;
 import com.liquoriceutils.helpers.LiquoriceIntentHelper;
 import com.liquoriceutils.helpers.LiquoriceStringHelper;
 import com.liquoriceutils.helpers.log.FeedbackHelper;
+import com.liquoriceutils.helpers.log.Logger;
 import com.liquoriceutils.helpers.ui.dialog.LiquoriceDialogHelper;
 
 import java.text.SimpleDateFormat;
@@ -52,6 +53,7 @@ public class FeedbackFragment extends BaseFragment implements View.OnClickListen
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = (BaseActivity) getActivity();
+        Logger.error(FeedbackFragment.class, "FeedbackFragment onCreate");
     }
 
     @Nullable
@@ -61,6 +63,8 @@ public class FeedbackFragment extends BaseFragment implements View.OnClickListen
         ButterKnife.bind(this, view);
         initInstructions();
         sendFeedbackButton.setOnClickListener(this);
+
+        Logger.error(FeedbackFragment.class, "FeedbackFragment onCreateView ++++++++++++++");
         return view;
     }
 

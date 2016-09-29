@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 
-import com.liquoriceutils.core.R;
+import com.liquoriceutils.R;
 import com.liquoriceutils.core.LiquoriceApplication;
 import com.liquoriceutils.helpers.log.Logger;
 

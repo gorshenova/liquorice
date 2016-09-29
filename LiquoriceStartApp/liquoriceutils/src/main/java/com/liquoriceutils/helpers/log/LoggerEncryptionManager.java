@@ -1,6 +1,6 @@
 package com.liquoriceutils.helpers.log;
 
-import com.liquoriceutils.core.BuildConfig;
+import com.liquoriceutils.BuildConfig;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;

@@ -5,7 +5,7 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 
 import com.liquoriceutils.core.LiquoriceConstants;
-import com.liquoriceutils.core.R;
+import com.liquoriceutils.R;
 import com.liquoriceutils.core.LiquoriceApplication;
 import com.liquoriceutils.helpers.log.Logger;
 

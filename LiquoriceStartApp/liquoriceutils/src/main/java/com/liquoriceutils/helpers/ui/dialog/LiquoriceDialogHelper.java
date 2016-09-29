@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.liquoriceutils.helpers.log.Logger;
-import com.liquoriceutils.core.R;
+import com.liquoriceutils.R;
 
 public class LiquoriceDialogHelper {
 
