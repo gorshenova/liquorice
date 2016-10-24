@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dimen_20"
+    android:paddingRight="@dimen/dimen_20"
+    android:paddingTop="@dimen/dimen_5"
+    android:paddingBottom="@dimen/dimen_5">
+
+    <TextView
+        android:id="@+id/report_summary_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:textSize="@dimen/font_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorGreyLight"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_6"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_6">
+
+        <TextView
+            android:id="@+id/report_summary_total_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:gravity="center"
+            android:minWidth="@dimen/dimen_50"
+            android:textSize="@dimen/font_16"/>
+    </LinearLayout>
+</RelativeLayout>

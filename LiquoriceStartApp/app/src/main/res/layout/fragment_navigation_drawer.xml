@@ -17,6 +17,6 @@
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/dimen_10"
         android:paddingTop="@dimen/dimen_10"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"/>
 
 </LinearLayout>

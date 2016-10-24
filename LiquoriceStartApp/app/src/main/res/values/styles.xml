@@ -20,4 +20,10 @@
     <style name="App.Theme.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="TextButton">
+        <item name="android:padding">@dimen/dimen_7</item>
+        <item name="android:textSize">@dimen/dimen_16</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
 </resources>

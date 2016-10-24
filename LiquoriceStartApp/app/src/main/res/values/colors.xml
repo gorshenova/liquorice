@@ -6,4 +6,20 @@
     <color name="colorGreyLight">#363636</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlack">#000000</color>
+
+    <color name="grey.68">#686868</color>
+    <color name="grey.ed">#ededed</color>
+    <color name="grey.ea">#eaeaea</color>
+    <color name="grey.d1">#d1d1d1</color>
+    <color name="grey.9b">#9b9b9b</color>
+    <color name="grey.2b">#2b2b2b</color>
+    <color name="grey.d8">#d8d8d8</color>
+    <color name="grey.e7">#e7e7e7</color>
+    <color name="grey.c4">#c4c4c4</color>
+    <color name="grey.33">#333333</color>
+    <color name="grey.88">#888888</color>
+    <color name="grey.f7">#f7f7f7</color>
+
+    <color name="color_report_progressbar_background_tint">#008aa7</color>
+    <color name="color_report_progressbar_tint">#cccccc</color>
 </resources>

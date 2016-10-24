@@ -7,4 +7,7 @@ package com.liquorice.app.android.ui.sections.menu;
 public interface MenuItems {
     int MENU_GENERAL_SETTINGS = 0;
     int MENU_FEEDBACK = 1;
+    int MENU_ADAPTEREDRECYCLERVIEW = 2;
+    int MENU_FONTS = 3;
+    int MENU_OTHER_VIEWS = 4;
 }

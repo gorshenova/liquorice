@@ -14,14 +14,14 @@ public class LiquoriceStartApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        instance =  this;
+        instance = this;
     }
 
-    public static LiquoriceStartApplication getApplication(){
+    public static LiquoriceStartApplication getApplication() {
         return instance;
     }
 
-    public static Application getContext(){
+    public static Application getContext() {
         return instance;
     }
 }

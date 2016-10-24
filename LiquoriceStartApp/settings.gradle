@@ -1,1 +1,1 @@
-include ':app', ':liquoriceutils'
+include ':app', ':liquoriceutils', ':adapteredrecyclerview'

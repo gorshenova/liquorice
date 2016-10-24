@@ -1,20 +1,20 @@
 package com.liquorice.app.android.ui.activities.abs;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.liquorice.app.android.R;
+import com.liquorice.app.android.ui.sections.FontFragment;
+import com.liquorice.app.android.ui.sections.OtherViewsFragment;
+import com.liquorice.app.android.ui.sections.adapteredrecyclerview.ReportFragment;
 import com.liquorice.app.android.ui.sections.feedback.FeedbackFragment;
 import com.liquorice.app.android.ui.sections.generalsettings.GeneralSettingsFragment;
 import com.liquorice.app.android.ui.sections.menu.MenuDrawerFragment;
 import com.liquorice.app.android.ui.sections.menu.MenuItems;
-import com.liquorice.app.android.R;
 import com.liquoriceutils.helpers.log.Logger;
 
 import butterknife.Bind;
@@ -81,10 +81,31 @@ public class BaseSlidingMenuActivity extends BaseActivity implements MenuDrawerF
             case MenuItems.MENU_GENERAL_SETTINGS:
                 openSettings();
                 break;
+            case MenuItems.MENU_ADAPTEREDRECYCLERVIEW:
+                openAdapteredRecyclerView();
+                break;
+            case MenuItems.MENU_FONTS:
+                openFontsScreen();
+                break;
+            case MenuItems.MENU_OTHER_VIEWS:
+                openOtherViews();
+                break;
             default:
                 logger.error("Menu isn't identified for position: " + position);
                 break;
         }
+    }
+
+    private void openOtherViews() {
+        openFragment(OtherViewsFragment.getInstance(getIntent().getExtras()), getString(R.string.menu_item_other_views));
+        setMenuTitle(R.string.menu_item_other_views);
+        drawerFragment.toogleMenu();
+    }
+
+    private void openAdapteredRecyclerView() {
+        openFragment(ReportFragment.getInstance(getIntent().getExtras()), getString(R.string.menu_item_adapteredrecyclerview));
+        setMenuTitle(R.string.menu_item_adapteredrecyclerview);
+        drawerFragment.toogleMenu();
     }
 
     private void openSettings() {
@@ -96,6 +117,12 @@ public class BaseSlidingMenuActivity extends BaseActivity implements MenuDrawerF
     private void openFeedback() {
         openFragment(FeedbackFragment.getInstance(getIntent().getExtras()), getString(R.string.menu_item_feedback));
         setMenuTitle(R.string.text_feedback_instructions_title);
+        drawerFragment.toogleMenu();
+    }
+
+    private void openFontsScreen() {
+        openFragment(FontFragment.getInstance(getIntent().getExtras()), getString(R.string.menu_item_fonts));
+        setMenuTitle(R.string.menu_item_fonts);
         drawerFragment.toogleMenu();
     }
 

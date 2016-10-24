@@ -24,9 +24,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by eyablonskaya on 9/27/2016.
+ * MenuDrawerFragment
  */
-
 public class MenuDrawerFragment extends BaseFragment {
 
     @Bind(R.id.drawerList)

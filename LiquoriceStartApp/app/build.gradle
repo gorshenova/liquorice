@@ -40,4 +40,8 @@ dependencies {
     compile project(':liquoriceutils')
 
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+
+    //MPAndroidChart library
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+    compile project(path: ':adapteredrecyclerview')
 }
