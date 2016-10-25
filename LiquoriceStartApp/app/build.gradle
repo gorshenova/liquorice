@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "com.liquorice.app.android"
-        minSdkVersion 16
-        targetSdkVersion 24
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -44,4 +45,8 @@ dependencies {
     //MPAndroidChart library
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
     compile project(path: ':adapteredrecyclerview')
+
+    //Picasso
+    compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    compile project(path: ':roundedimageview')
 }

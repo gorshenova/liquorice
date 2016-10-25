@@ -1,1 +1,1 @@
-include ':app', ':liquoriceutils', ':adapteredrecyclerview'
+include ':app', ':liquoriceutils', ':adapteredrecyclerview', ':roundedimageview'
