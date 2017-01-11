@@ -26,12 +26,14 @@
     <string name="menu_item_adapteredrecyclerview">AdapteredRecyclerView</string>
     <string name="menu_item_fonts">Fonts</string>
     <string name="menu_item_other_views">Other views</string>
+    <string name="menu_item_zoomed_imageviews">Zoom imageView</string>
     <string-array name="menu_items">
         <item>@string/menu_item_general_settings</item>
         <item>@string/menu_item_feedback</item>
         <item>@string/menu_item_adapteredrecyclerview</item>
         <item>@string/menu_item_fonts</item>
         <item>@string/menu_item_other_views</item>
+        <item>@string/menu_item_zoomed_imageviews</item>
     </string-array>
 
     <!--GENERAL SETTINGS -->
@@ -66,4 +68,6 @@
     <string name="report_chart_status_incomplete">%d incomplete</string>
     <string name="error_report_loading">Cann\'t load report</string>
     <string name="report_no_chart_text">No Chart</string>
+
+    <string name="touch_image_text">Click TouchImageView to cycle through image resources. Note that the zoom state is maintained.</string>
 </resources>

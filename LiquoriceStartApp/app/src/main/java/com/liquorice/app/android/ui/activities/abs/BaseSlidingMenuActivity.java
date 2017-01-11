@@ -10,6 +10,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.liquorice.app.android.R;
 import com.liquorice.app.android.ui.sections.FontFragment;
 import com.liquorice.app.android.ui.sections.OtherViewsFragment;
+import com.liquorice.app.android.ui.sections.ZoomedImageViewFragment;
 import com.liquorice.app.android.ui.sections.adapteredrecyclerview.ReportFragment;
 import com.liquorice.app.android.ui.sections.feedback.FeedbackFragment;
 import com.liquorice.app.android.ui.sections.generalsettings.GeneralSettingsFragment;
@@ -90,10 +91,19 @@ public class BaseSlidingMenuActivity extends BaseActivity implements MenuDrawerF
             case MenuItems.MENU_OTHER_VIEWS:
                 openOtherViews();
                 break;
+            case MenuItems.MENU_ZOOMED_IMAGEVIEW:
+                openZoomedImageView();
+                break;
             default:
                 logger.error("Menu isn't identified for position: " + position);
                 break;
         }
+    }
+
+    private void openZoomedImageView() {
+        openFragment(ZoomedImageViewFragment.getInstance(getIntent().getExtras()), getString(R.string.menu_item_zoomed_imageviews));
+        setMenuTitle(R.string.menu_item_zoomed_imageviews);
+        drawerFragment.toogleMenu();
     }
 
     private void openOtherViews() {

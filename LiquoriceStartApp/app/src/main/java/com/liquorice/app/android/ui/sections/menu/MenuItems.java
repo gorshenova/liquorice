@@ -10,4 +10,5 @@ public interface MenuItems {
     int MENU_ADAPTEREDRECYCLERVIEW = 2;
     int MENU_FONTS = 3;
     int MENU_OTHER_VIEWS = 4;
+    int MENU_ZOOMED_IMAGEVIEW =5;
 }
